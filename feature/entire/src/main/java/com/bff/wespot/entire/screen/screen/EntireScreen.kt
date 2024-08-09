@@ -44,6 +44,7 @@ import com.bff.wespot.designsystem.theme.StaticTypeScale
 import com.bff.wespot.designsystem.theme.WeSpotThemeManager
 import com.bff.wespot.entire.R
 import com.bff.wespot.entire.screen.component.EntireListItem
+import com.bff.wespot.entire.screen.screen.edit.ProfileEditNavArgs
 import com.bff.wespot.entire.screen.state.EntireAction
 import com.bff.wespot.entire.screen.viewmodel.EntireViewModel
 import com.bff.wespot.model.user.response.Profile
@@ -53,6 +54,7 @@ import org.orbitmvi.orbit.compose.collectAsState
 interface EntireNavigator {
     fun navigateUp()
     fun navigateToSetting()
+    fun navigateToProfileEditScreen(args: ProfileEditNavArgs)
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -91,7 +93,7 @@ internal fun EntireScreen(
         ) {
             ProfileContent(
                 profile = state.profile,
-                onClick = {},
+                onClick = { navigator.navigateToProfileEditScreen(ProfileEditNavArgs(false)) },
             )
 
             Spacer(modifier = Modifier.height(8.dp))

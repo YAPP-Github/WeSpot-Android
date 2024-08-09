@@ -1,4 +1,4 @@
-package com.bff.wespot.entire.screen.screen.revoke
+package com.bff.wespot.entire.screen.screen.setting
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -72,6 +72,7 @@ fun RevokeConfirmScreen(
                 intent.putExtra(EXTRA_TOAST_MESSAGE, context.getString(R.string.revoke_done))
                 context.startActivity(intent)
             }
+            else -> {}
         }
     }
 

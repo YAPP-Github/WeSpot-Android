@@ -10,4 +10,5 @@
     <string name="introduce_to_friend">친구들에게 %1$s을 소개하는 한 줄을 작성해주세요</string>
     <string name="introduction_placeholder">안녕 나는 1반의 비타민</string>
     <string name="edit_complete">작성 완료</string>
+    <string name="edit_done">작성 완료</string>
 </resources>

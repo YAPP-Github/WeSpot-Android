@@ -48,6 +48,15 @@
     <string name="revoke_bottom_sheet_content2">" • 탈퇴 후 계정을 복구하고 싶다면 15일(360시간)이\n    지나기 전에 가입한 계정으로 다시 로그인해 주세요"</string>
     <string name="revoke_confirm_text">모든 내용을 숙지하였고, 탈퇴에 동의합니다</string>
     <string name="do_revoke">탈퇴하기</string>
+    <string name="edit_done">수정 완료</string>
+    <string name="edit_icon">Edit Icon</string>
+    <string name="name">이름</string>
+    <string name="gender">성별</string>
+    <string name="school_info">학력 정보</string>
+    <string name="request_change_profile">개인정보 변경 신청</string>
+    <string name="request_profile_edit_text">하단의 버튼을 눌러 변경 신청해 주세요</string>
+    <string name="introduction_limit">20자 이내로 입력이 가능해요</string>
+    <string name="introduction">한 줄 소개</string>
     <string name="unblock">차단 해제</string>
     <string name="unblock_done">해제 완료</string>
     <string name="unblock_dialog_title">차단 해제하시나요?</string>

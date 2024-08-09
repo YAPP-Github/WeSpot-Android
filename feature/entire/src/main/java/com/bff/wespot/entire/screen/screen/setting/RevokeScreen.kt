@@ -1,4 +1,4 @@
-package com.bff.wespot.entire.screen.screen.revoke
+package com.bff.wespot.entire.screen.screen.setting
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement

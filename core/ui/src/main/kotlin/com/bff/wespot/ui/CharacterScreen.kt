@@ -57,6 +57,7 @@ fun CharacterScreen(
     name: String,
     characterList: List<Character>,
     colorList: List<BackgroundColor>,
+    isEditing: Boolean = false,
     navigateToNext: (String, String) -> Unit,
 ) {
     require(characterList.isNotEmpty()) { "Character list should not be empty" }
@@ -142,7 +143,9 @@ fun CharacterScreen(
                         onClick = {
                             navigateToNext(character, color)
                         },
-                        text = stringResource(R.string.complete),
+                        text = stringResource(
+                            if (isEditing) R.string.edit_done else R.string.complete,
+                        ),
                     ) {
                         it.invoke()
                     }
@@ -254,6 +257,7 @@ private fun CharacterPickerBox(
         Text(
             text = stringResource(id = R.string.character),
             style = StaticTypeScale.Default.body6,
+            color = Color(0xFFAEAFB4),
         )
 
         LazyVerticalGrid(

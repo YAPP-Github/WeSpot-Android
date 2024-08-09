@@ -1,4 +1,4 @@
-package com.bff.wespot.entire.screen.screen
+package com.bff.wespot.entire.screen.screen.setting
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
