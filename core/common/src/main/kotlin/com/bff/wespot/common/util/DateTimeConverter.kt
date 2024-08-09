@@ -9,7 +9,7 @@ fun LocalDate.toDateTimeString(): String =
     "${this.monthValue}월 ${this.dayOfMonth}일 ${this.dayOfWeek.name.toKoreanWeekDay()}"
 
 fun LocalDate.toDateString(): String =
-    "${this.year}-${this.monthValue}-${this.dayOfMonth}"
+    "%04d-%02d-%02d".format(this.year, this.monthValue, this.dayOfMonth)
 
 fun String.timeDifference(): Long {
     val formatter = DateTimeFormatter.ISO_LOCAL_DATE
@@ -40,6 +40,7 @@ fun Long.toDateString(date: String): String =
             "${this}일 전"
         }
         else -> {
+            println("data: $date")
             date.split("-").joinToString(".")
         }
     }

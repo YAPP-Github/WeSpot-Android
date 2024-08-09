@@ -4,8 +4,8 @@ import com.bff.wespot.data.remote.model.auth.request.KakaoAuthTokenDto
 import com.bff.wespot.data.remote.model.auth.request.SignUpDto
 import com.bff.wespot.data.remote.model.auth.response.AuthTokenDto
 import com.bff.wespot.data.remote.model.auth.response.SchoolListDto
-import com.bff.wespot.network.extensions.safeRequest
 import com.bff.wespot.model.auth.request.RevokeReasonListDto
+import com.bff.wespot.network.extensions.safeRequest
 import io.ktor.client.HttpClient
 import io.ktor.client.request.parameter
 import io.ktor.client.request.setBody
@@ -20,7 +20,7 @@ class AuthDataSourceImpl @Inject constructor(
         httpClient.safeRequest {
             url {
                 method = HttpMethod.Get
-                path("auth/signup/schools/search")
+                path("schools/search")
                 parameter("name", search)
             }
         }

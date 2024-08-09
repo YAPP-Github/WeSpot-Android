@@ -67,4 +67,10 @@ class WeSpotDataStoreImpl @Inject constructor(
             .map {
                 it[booleanPreferencesKey(key)] ?: false
             }
+
+    override suspend fun clear() {
+        datastore.edit { preferences ->
+            preferences.clear()
+        }
+    }
 }

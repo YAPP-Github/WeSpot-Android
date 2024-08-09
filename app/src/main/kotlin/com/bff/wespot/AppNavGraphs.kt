@@ -160,8 +160,8 @@ fun DestinationScopeWithNoDependencies<*>.currentNavigator(): CommonNavGraphNavi
 @Composable
 internal fun AppNavigation(
     navController: NavHostController,
-    navigator: Navigator,
     modifier: Modifier = Modifier,
+    navigator: Navigator,
 ) {
     val engine = rememberNavHostEngine(
         rootDefaultAnimations = RootNavGraphDefaultAnimations(

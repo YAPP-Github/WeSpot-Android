@@ -7,13 +7,14 @@ import android.net.Uri
 import com.bff.wespot.auth.AuthActivity
 import com.bff.wespot.navigation.Navigator
 import com.bff.wespot.navigation.util.buildIntent
+import timber.log.Timber
 import javax.inject.Inject
 
 
 class NavigatorImpl @Inject constructor() : Navigator {
     private val sharingName = listOf(
         "instagram",
-        "kakao",
+        "kakao"
     )
 
     override fun navigateToMain(

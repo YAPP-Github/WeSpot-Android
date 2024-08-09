@@ -54,6 +54,13 @@ class VotingViewModel @Inject constructor(
             try {
                 voteRepository.getVoteQuestions()
                     .onSuccess {
+                        if (it.voteItems.isEmpty()) {
+                            postSideEffect(VotingSideEffect.ShowToast("투표 항목이 없습니다"))
+                            reduce {
+                                state.copy(loading = false)
+                            }
+                            return@onSuccess
+                        }
                         reduce {
                             state.copy(
                                 voteItems = it.voteItems,
@@ -68,6 +75,9 @@ class VotingViewModel @Inject constructor(
                     }
                     .onFailure {
                         Timber.e(it)
+                        reduce {
+                            state.copy(loading = false, voteItems = emptyList())
+                        }
                     }
             } catch (e: Exception) {
                 Timber.e(e)

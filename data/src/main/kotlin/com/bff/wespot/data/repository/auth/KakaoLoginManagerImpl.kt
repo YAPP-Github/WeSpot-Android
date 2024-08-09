@@ -27,7 +27,6 @@ class KakaoLoginManagerImpl @Inject constructor(
                     val token = UserApiClient.loginWithKakaoTalk()
                     KakaoAuthToken(
                         accessToken = token.accessToken,
-                        idToken = token.idToken,
                     )
                 }
 
@@ -35,7 +34,6 @@ class KakaoLoginManagerImpl @Inject constructor(
                     val token = UserApiClient.loginWithKakaoAccount()
                     KakaoAuthToken(
                         accessToken = token.accessToken,
-                        idToken = token.idToken,
                     )
                 }
             }
@@ -47,7 +45,6 @@ class KakaoLoginManagerImpl @Inject constructor(
             val token = UserApiClient.loginWithKakaoAccount()
             KakaoAuthToken(
                 accessToken = token.accessToken,
-                idToken = token.idToken,
             )
         }
     }

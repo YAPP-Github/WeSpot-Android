@@ -7,7 +7,7 @@ import com.bff.wespot.model.vote.request.VoteResultsUpload
 
 fun VoteResultsUpload.toDto() =
     VoteResultsUploadDto(
-        votes = voteResults.map { it.toDto() }
+        voteRequests = voteResults.map { it.toDto() }
     )
 
 fun VoteResultUpload.toDto() =

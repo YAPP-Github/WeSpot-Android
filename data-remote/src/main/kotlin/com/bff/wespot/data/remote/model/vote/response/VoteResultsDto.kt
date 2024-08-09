@@ -17,11 +17,11 @@ data class VoteResultsDto(
 @Serializable
 data class VoteResultDto(
     val voteOption: VoteOptionDto,
-    val results: List<ResultDto>,
+    val voteResult: List<ResultDto>,
 ) {
     fun toVoteResult() = VoteResult(
         voteOption = voteOption.toVoteOption(),
-        results = results.map { it.toResult() },
+        results = voteResult.map { it.toResult() },
     )
 }
 

@@ -5,9 +5,9 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class VoteResultsUploadDto(
-    val votes: List<VoteResultUploadDto>
+    val voteRequests: List<VoteResultUploadDto>
 ) {
     fun Result() = VoteResultsUpload(
-        voteResults = votes.map { it.toVote() }
+        voteResults = voteRequests.map { it.toVote() }
     )
 }

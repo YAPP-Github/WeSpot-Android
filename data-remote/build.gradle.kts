@@ -1,8 +1,3 @@
-import org.jetbrains.kotlin.konan.properties.Properties
-
-val properties = Properties()
-properties.load(rootProject.file("local.properties").inputStream())
-
 plugins {
     alias(libs.plugins.wespot.android.library)
     alias(libs.plugins.wespot.android.hilt)
@@ -11,14 +6,6 @@ plugins {
 
 android {
     namespace = "com.bff.wespot.data.remote"
-
-    defaultConfig {
-        buildConfigField("String", "MOCK_BASE_URL", properties.getProperty("MOCK_BASE_URL"))
-    }
-
-    buildFeatures {
-        buildConfig = true
-    }
 }
 
 dependencies {

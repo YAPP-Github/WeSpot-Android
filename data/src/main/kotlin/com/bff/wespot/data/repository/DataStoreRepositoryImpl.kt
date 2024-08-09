@@ -19,4 +19,8 @@ class DataStoreRepositoryImpl @Inject constructor(
 
     override fun getBoolean(key: String): Flow<Boolean> =
         dataStore.getBoolean(key)
+
+    override suspend fun clear() {
+        dataStore.clear()
+    }
 }
