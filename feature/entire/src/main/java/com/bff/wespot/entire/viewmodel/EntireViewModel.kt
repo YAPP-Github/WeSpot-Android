@@ -17,6 +17,7 @@ import com.bff.wespot.model.common.Paging
 import com.bff.wespot.model.message.response.BlockedMessage
 import com.bff.wespot.ui.base.BaseViewModel
 import com.bff.wespot.ui.model.SideEffect.Companion.toSideEffect
+import com.bff.wespot.ui.util.KakaoLoginManager
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.distinctUntilChanged
@@ -110,6 +111,7 @@ class EntireViewModel @Inject constructor(
 
     private fun signOut() = intent {
         clearCachedData()
+        KakaoLoginManager.logout()
         postSideEffect(EntireSideEffect.NavigateToAuth)
     }
 

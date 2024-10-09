@@ -117,8 +117,10 @@ fun AuthScreen(
         Button(
             onClick = {
                 coroutineScope.launch {
-                    val token = kakaoLogin.loginWithKakao(context)
-                    viewModel.onAction(AuthAction.LoginWithKakao(token))
+                    runCatching {
+                        val token = kakaoLogin.loginWithKakao(context)
+                        viewModel.onAction(AuthAction.LoginWithKakao(token))
+                    }
                 }
             },
             modifier = Modifier
